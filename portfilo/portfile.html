@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFILE</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="https://kit.fontawesome.com/c24233dc13.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="homecontainer">
+        <nav>
+            <h1>KEVIN.</h1>
+            <ul>
+                <li><a href="#homecontainer">Home</a></li>
+                <li><a href="#aboutcontainer">About</a></li>
+                <li><a href="#service">Services</a></li>
+                <li><a href="#work">Portfile</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="contain">
+            <p>Web Developer</p>
+            <h1> Hi,I'm <span>AJAY</span><br> Kumar From India</h1>
+            <div class="contain-im">
+                <img src="background.png">
+            </div>
+        </div>
+    </div>
+    <div id="aboutcontainer">
+        <div class="about-ima">
+            <img src="user.png">
+        </div>
+        <div class="about-contain">
+            <h1>About Me</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium, reiciendis dicta. Modi, quaerat iusto aliquid nemo esse aut. Commodi vero repudiandae ex dolores praesentium labore quam, distinctio debitis harum tenetur.</p>
+            <div class="about-skills">
+                <h4 class="active-link">Skills</h4>
+                <h4>Education</h4>
+            </div>
+            <div class="about-skills-contain active-link">
+                <ul>
+                    <li><span>UI/UX</span><br>Designing web/App interface</li>
+                    <li><span>Web Development</span><br>Designing web pages</li>
+                </ul>
+            </div>
+            <div class="about-skills-contain">
+                <ul>
+                    <li><span>Intermediate 2019</span><br>Narayana Jurior Colege</li>
+                    <li><span>B-tech 2019-2023</span><br>Sree Vidyanikethan College</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <div id="service">
+        <h1>My Service</h1>
+        <div class="service-contain">
+            <div class="service-html">
+                <i></i>
+                <h1>Web Design</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto cumque ducimus dolore. Nemo in odit, voluptatem consequuntur quam dolorem. Tenetur exercitationem accusantium ratione velit eum laboriosam, corporis accusamus molestiae voluptate!</p>
+            </div>
+            <div class="service-html">
+                <i></i>
+                <h1>UI/UX</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto cumque ducimus dolore. Nemo in odit, voluptatem consequuntur quam dolorem. Tenetur exercitationem accusantium ratione velit eum laboriosam, corporis accusamus molestiae voluptate!</p>
+            </div>
+            <div class="service-html">
+                <i></i>
+                <h1>App Design</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto cumque ducimus dolore. Nemo in odit, voluptatem consequuntur quam dolorem. Tenetur exercitationem accusantium ratione velit eum laboriosam, corporis accusamus molestiae voluptate!</p>
+            </div>
+        </div>
+    </div>
+    <div id="work">
+        <div class="work-header">
+            <h1>My Work</h1>
+        </div>
+        <div class="work-container">
+            <div class="work-content">
+                <img src="work-1.png">
+                <div class="layer">
+                    <h2>Social Media App</h2>
+                </div>
+            </div>
+            <div class="work-content">
+                <img src="work-2.png">
+                <div class="layer">
+                    <h2>Music App</h2>
+                </div>
+            </div>
+            <div class="work-content">
+                <img src="work-3.png">
+                <div class="layer">
+                    <h2>Online Shopping App</h2>
+                </div>
+        </div>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="contact-header">
+            <h1>Contact Me</h1>
+        </div>
+        <div class="contact-content">
+            <div class="contact-co-1">
+                <div class="contact-email">
+                    <i class="fab fa-telegram-plane"></i>
+                    <p>abc@gmail.com</p>
+                </div>
+                <div class="contact-email">
+                    <i class="fas fa-phone-square-alt"></i>
+                    <p>0123456789</p>
+                </div>
+                <div class="contact-icon">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="contact-btn1">
+                    <a href="my-cv.pdf" class="contact-btn">Download CV</a>
+                </div>
+            </div>
+            <div class="contact-co1-2">
+                <form action="submit-to-google-sheet" name="submit-to-google-sheet" class="contact-form">
+                    <input type="text" name="Name" placeholder="Enter Your Name">
+                    <input type="text" name="Email" placeholder="Enter Your Email Address">
+                    <input type="text" name="Message" placeholder="Enter Your Subject">
+                    <textarea rows="5" placeholder="Messages"></textarea>
+                    <button class="contact-btn2" type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbygL911aLLDZqbb1pdoMBy0xNtebm51SUCdpLVRc8Q1ZWUo5S8ibk8Fp_d4E_xlxdcJLw/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+</body>
+</html>
